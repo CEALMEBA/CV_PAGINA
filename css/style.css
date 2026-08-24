@@ -638,3 +638,68 @@ table.striped td:last-child {
   height: 2px;
   background: var(--accent-gradient);
 }
+
+/* Resume Profile Switcher Styling */
+.profile-tabs-wrapper {
+  scrollbar-width: none; /* Firefox */
+}
+.profile-tabs-wrapper::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.profile-tab-btn {
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--text-secondary);
+  border: 1px solid var(--card-border);
+  padding: 8px 16px;
+  border-radius: 30px;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-tab-btn:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(99, 102, 241, 0.3);
+  color: var(--text-primary);
+}
+
+.profile-tab-btn.active {
+  background: var(--accent-gradient);
+  color: #fff;
+  border-color: transparent;
+  box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
+}
+
+/* Smooth Switching Animations */
+#profile-role, #about-description, #skills-container, #experience-timeline {
+  transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-out {
+  opacity: 0 !important;
+  transform: translateY(4px) !important;
+}
+
+.fade-in {
+  animation: slideUpFade 0.25s forwards cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes slideUpFade {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
