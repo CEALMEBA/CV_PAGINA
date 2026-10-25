@@ -750,3 +750,6 @@ html { scroll-behavior: smooth; scroll-padding-top: 80px; }
   .card, .card * { color: #111 !important; }
   .container { width: 100% !important; margin: 0 !important; }
 }
+
+.secondary-btn { background: transparent; border: 1px solid var(--card-border-hover); box-shadow: none; margin-top: 12px; }
+.secondary-btn:hover { background: rgba(99, 102, 241, 0.15); }
