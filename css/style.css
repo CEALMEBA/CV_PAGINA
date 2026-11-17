@@ -753,3 +753,17 @@ html { scroll-behavior: smooth; scroll-padding-top: 80px; }
 
 .secondary-btn { background: transparent; border: 1px solid var(--card-border-hover); box-shadow: none; margin-top: 12px; }
 .secondary-btn:hover { background: rgba(99, 102, 241, 0.15); }
+
+/* ---- Perfil + idioma, WhatsApp y viñetas de experiencia ---- */
+.selector-header { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 12px; }
+.selector-label { font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted); font-weight: 600; letter-spacing: 0.05em; }
+.lang-switch { display: inline-flex; border: 1px solid var(--card-border); border-radius: 999px; overflow: hidden; flex-shrink: 0; }
+.lang-btn {
+  background: transparent; color: var(--text-secondary); border: 0; padding: 5px 12px;
+  font-family: var(--font-sans); font-size: 0.75rem; font-weight: 700; cursor: pointer;
+}
+.lang-btn.active { background: var(--accent-gradient); color: #fff; }
+.whatsapp-btn { background: #128c7e; margin-top: 12px; }
+.timeline-bullets { margin: 0; padding-left: 18px; color: var(--text-secondary); line-height: 1.6; }
+.timeline-bullets li { margin-bottom: 4px; }
+@media print { .lang-switch { display: none !important; } }
